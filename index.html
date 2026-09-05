@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7fbeb" />
+  <title>Mariane's 8th Birthday | Digital Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="image-overrides.css" />
+  <link rel="stylesheet" href="pink-overrides.css" />
+  <link rel="stylesheet" href="contrast-overrides.css" />
+  <link rel="stylesheet" href="clean-invite.css" />
+  <link rel="stylesheet" href="gallery-overrides.css" />
+  <link rel="stylesheet" href="invitation-reference.css" />
+  <link rel="stylesheet" href="invitation-final.css" />
+  <link rel="stylesheet" href="invitation-clean-final.css" />
+  <link rel="stylesheet" href="location-card.css" />
+  <link rel="stylesheet" href="gallery-fix.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Mariane's party home"><span class="brand-mark">✿</span><span>Butterfly Garden</span></a>
+      <div class="top-actions"><nav class="site-nav"><a class="active" href="invite.html">Invitation</a><a href="program.html">Program &amp; Games</a><a href="rsvp.html">RSVP</a><a href="upload.html">Upload Photos</a></nav>
+        <span id="roleBadge" class="role-badge">Guest view</span>
+        <button class="icon-button" id="roleToggle" type="button" title="Switch to admin mode" aria-label="Switch to admin mode">⚙</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" id="hero" aria-labelledby="eventTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">Our little butterfly</p>
+          <h1 id="eventTitle">Mariane</h1>
+          <p class="hero-intro" id="eventDescription">is turning 8</p>
+          <div class="hero-details">
+            <div><span class="detail-icon">◷</span><div><strong id="eventDate">September 12 at 3pm Saturday</strong><span id="eventTime"></span></div></div>
+            <div><span class="detail-icon">⌖</span><div><strong id="eventVenue">S and R Private Inland Resort</strong><span id="eventAddress">Prk. 20-A Nordida, Sto. Tomas</span><a class="map-link" href="https://maps.app.goo.gl/j7fzzky6fZZc6Q4T8" target="_blank" rel="noopener">📍 View Location on Google Maps</a></div></div>
+          </div>
+          <p class="hero-intro invitation-line">join us as we celebrate this</p>
+        </div>
+        <div class="garden-art" aria-label="Mariane's invitation artwork" role="img"><div class="celebrant-photo-container"><img class="celebrant-img" src="assets/invitation.png" alt="Mariane's invitation"></div>
+          <div class="invite-gallery"><div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><img class="secondary-invite" src="assets/secondary-invitation.jpg" alt="Pink butterfly invitation graphic"></div>
+          <div class="butterfly butterfly-main"><span></span><span></span><i></i></div>
+          <div class="butterfly butterfly-small"><span></span><span></span><i></i></div>
+          <div class="flower flower-one">✿</div><div class="flower flower-two">✿</div><div class="flower flower-three">✿</div>
+          <div class="stem stem-one"></div><div class="stem stem-two"></div><div class="stem stem-three"></div>
+          <div class="grass"></div><div class="art-note">flutter, play<br /><strong>&amp; celebrate</strong></div>
+        </div>
+      </section>
+
+      <!-- RSVP, program, games, and sharing live on their dedicated pages. -->
+      <section class="content-section rsvp-section" id="rsvp" hidden>
+        <div class="section-heading"><p class="eyebrow">Let us know</p><h2>Will you join<br /><em>the garden?</em></h2><p>Your reply helps us prepare the treats, games, and little surprises.</p></div>
+        <form id="rsvpForm" class="rsvp-form">
+          <label>Guest name<input id="guestName" name="name" type="text" placeholder="Your name" required /></label>
+          <div class="choice-row"><label class="choice"><input type="radio" name="attendance" value="attending" checked /><span class="choice-card"><b>Yes, I’ll be there</b><small>Count me in for the fun</small></span></label><label class="choice"><input type="radio" name="attendance" value="declined" /><span class="choice-card"><b>Sadly, can’t make it</b><small>Sending birthday wishes</small></span></label></div>
+          <label>Number of guests<select id="guestCount" name="count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label>Note <span class="optional">optional</span><textarea id="guestNote" name="note" rows="3" placeholder="A message for Mariane..."></textarea></label>
+          <button class="primary-button full-width" type="submit">Send my RSVP <span>→</span></button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </section>
+
+      <section class="program-band" id="schedule">
+        <div class="content-section program-layout"><div class="program-intro"><p class="eyebrow">Save the afternoon</p><h2>A little<br /><em>garden magic</em></h2><p>We have a lovely line-up of games, snacks, and moments to remember.</p><button class="outline-button" id="downloadProgram" type="button">Download program <span>↓</span></button></div><div class="timeline" id="timeline"></div></div>
+      </section>
+
+      <section class="content-section games-section" id="games"><div class="section-heading centered"><p class="eyebrow">For our game hosts</p><h2>Playful plans</h2><p>Five easy games to keep every little butterfly moving.</p></div><div class="game-grid" id="gameGrid"></div></section>
+
+      <section class="content-section share-section"><div><p class="eyebrow">Keep the memories</p><h2>Share the<br /><em>happy moments</em></h2><p>Download this invitation as an image to share with your family group chat.</p></div><button class="primary-button" id="downloadInvite" type="button">Download invitation <span>↓</span></button></section>
+    </main>
+
+    <footer class="footer"><span>With love, Papa, Mama &amp; Mariane</span><span>🦋 September 12</span></footer>
+  </div>
+
+    <dialog id="loginDialog" class="admin-dialog"><form method="dialog" id="loginForm"><div class="dialog-heading"><div><p class="eyebrow">Private controls</p><h2>Admin access</h2></div><button class="close-button" value="cancel" aria-label="Close">×</button></div><p class="dialog-note">Enter the admin passcode to edit this invitation.</p><label>Passcode<input id="adminPasscode" type="password" autocomplete="current-password" required /></label><p class="form-message" id="loginMessage"></p><div class="dialog-actions"><button class="outline-button" value="cancel">Cancel</button><button class="primary-button" id="loginSubmit" value="default">Continue <span>→</span></button></div></form></dialog>
+  <dialog id="adminDialog" class="admin-dialog"><form method="dialog" id="adminForm"><div class="dialog-heading"><div><p class="eyebrow">Private controls</p><h2>Edit invitation</h2></div><button class="close-button" value="cancel" aria-label="Close">×</button></div><p class="dialog-note">Changes are saved in this browser and appear on the guest view instantly.</p><div class="admin-fields"><label>Event title<input id="adminTitle" type="text" /></label><label>Short description<textarea id="adminDescription" rows="2"></textarea></label><div class="field-row"><label>Date<input id="adminDate" type="text" /></label><label>Time<input id="adminTime" type="text" /></label></div><label>Venue<input id="adminVenue" type="text" /></label><label>Address<input id="adminAddress" type="text" /></label><label>Primary color<input id="adminColor" type="color" /></label></div><div class="dialog-actions"><button class="outline-button" value="cancel">Cancel</button><button class="primary-button" id="saveEvent" value="default">Save changes <span>✓</span></button></div></form></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="nav.js"></script><script src="app.js"></script>
+</body>
+</html>

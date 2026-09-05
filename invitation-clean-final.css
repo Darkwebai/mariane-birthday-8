@@ -1,0 +1,1 @@
+.garden-art.has-invite-photo> :not(.invite-photo){display:none!important}.garden-art.has-invite-photo .invite-photo{display:block!important;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1!important;z-index:20}.garden-art.has-invite-photo{background:#fff2f8!important}
